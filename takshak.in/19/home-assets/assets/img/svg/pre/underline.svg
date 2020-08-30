@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="10px" viewBox="0 0 64 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>underline</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="footer" transform="translate(-853.000000, -118.000000)" stroke="#08242A" stroke-width="3">
+            <g id="subscribe">
+                <g transform="translate(548.000000, 86.000000)">
+                    <path d="M308.272755,42.4441748 C301.098448,41.260557 332.382553,31.4441748 367.07714,33.4441748" id="underline" transform="translate(337.157855, 37.810234) rotate(5.000000) translate(-337.157855, -37.810234) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

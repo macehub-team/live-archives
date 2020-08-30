@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="62px" height="12px" viewBox="0 0 62 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>squiggle</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="Homepage" transform="translate(-798.000000, -2763.000000)" stroke="#b31dbd" stroke-width="3">
+            <g id="all-products" transform="translate(0.000000, 1935.000000)">
+                <g id="request" transform="translate(682.000000, 620.000000)">
+                    <g id="text" transform="translate(95.000000, 124.000000)">
+                        <path d="M23,92.5722656 C30.1255748,92.5400391 29.6399661,86 32.4730978,86 C35.3062295,86 35.975343,91.7578125 37.9639059,91.7578125 C40.813937,91.7578125 40.813937,86 43.8911156,86 C46.9682943,86 45.9908082,93.5400391 50.0961711,93.5400391 C52.0346297,93.5400391 54.4913875,87.1441271 56.6153563,87.0908203 C58.7393252,87.0375135 60.6002684,91.938318 62.7229919,92.0908203 C64.9333395,92.2496178 66.6204517,88.2586028 68.8306274,88.0908203 C70.3424721,87.9760507 76.4651718,97.0908203 81.0458984,89.5117401" id="squiggle"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

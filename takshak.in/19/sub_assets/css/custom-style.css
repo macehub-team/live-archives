@@ -1,0 +1,66 @@
+body{
+	color: #333333;
+	font-weight: 400;	
+}
+a:hover{
+	text-decoration: underline;
+}
+
+.text-t19-primary{
+	color: #5f04a0;
+}
+h1,h2,h3{
+	font-family: 'Squada One', cursive;	
+}
+p.nice-para{
+	font-size: 1rem;
+	line-height: 1.8;
+	margin: 20px 0;
+}
+.header-logo-text{
+	width: auto;
+	height: 25px;
+	margin: 15px 0;
+}
+.header-logo{
+	height: 50px;
+	width: auto;
+	margin: 2.5px 0;
+}
+.font-anton{
+	font-family: "Anton", sans-serif;
+}
+.main-menu {
+  background: rgba(0,0,0,0.2);
+}
+.page-main-title{
+	font-size: 70px!important;
+	font-family: 'Squada One', cursive;
+}
+
+.section-gap{
+	padding:120px 0 60px;
+}
+.feature-right.small-padd{
+	padding-left:50px;
+}
+h1.title-big{
+	font-size: 3.4rem;
+}
+h3.sub-title-big{
+	font-weight: normal;
+	color: #D6D6D6;
+	font-size: 3rem;
+	line-height: 1;
+	margin-bottom: -15px;
+}
+.footer-area .footer-bottom{
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+@media(max-width:640px){
+	.header-logo-text{
+		display:none;
+	}
+}
