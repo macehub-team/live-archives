@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:900');
+@import url('https://fonts.googleapis.com/css?family=Mukta:800|Source+Sans+Pro:900');
+		.main_welcome12{
+			position: fixed;
+			top:50%;
+			left:50%;
+			/*background-color: blue;*/
+			transform: translate(-50%, -50%);
+			/*overflow: hidden;*/
+			width:100%;
+			height: 100%;
+			display: none;  
+
+			z-index: 1000;
+		}
+		.boxq{
+			position: absolute;
+			height:300%;
+			/*background-color: red;*/
+			/*animation: example 1.5s linear;*/
+			/*animation-fill-mode: forwards;*/
+			transform: translate(-1000px, -1000px) skew(-50deg);
+			z-index:100;		
+			/*transform: ;*/
+		}
+
+		.box1q{
+			width:0%;
+			background-color: rgb(85, 224, 152);
+			display: none;
+		}
+		.box2q{
+			width:0%;
+			background-color: rgb(44, 46, 48);
+			display:none;
+		}
+
+		.message_welcome12{
+			position: absolute;
+			left:30px;
+			top:50%;
+			width:100%;
+			transform: translateY(-50%);
+			opacity: 0;
+			font-family: 'Source Sans Pro', sans-serif;
+		}
+		.message_welcome_extra{
+			top:75%;
+			opacity: 1;
+		}
+		.threeq{
+			position: absolute;
+			width:100%;
+			opacity: 1;
+		}
+		.oneq{
+			position: absolute;
+			width:100%;
+			opacity:0;
+		}
+		.twoq{
+			opacity: 0;
+		} 
+		.fourq{
+			opacity: 0;
+			font-family: 'Source Sans Pro', sans-serif;
+			font-family: 'Mukta', sans-serif;
+		} 
+		.lastq{
+			opacity: 1;
+			left:0px;
+			font-size: 40px;
+		}
+
+		.b1q{
+			position: absolute;
+			left:0px;
+			top:0px;
+			width:100%;
+			height:100%;
+			background-color: rgb(44, 46, 48);
+			display: none;
+			opacity: 0;
+			z-index: 200;	
+			font-size:60px;
+			color:rgb(85, 224, 152);
+			font-weight: bold;
+			line-height: 70px;
+		}
+		.b2q{
+			position: absolute;
+			left:0px;
+			top:0px;
+			width:100%;
+			height:100%;
+			background-color: rgb(85, 224, 152);
+			display: none;
+			opacity: 0;
+			z-index: 200;	
+			font-size:50px;
+			color:rgb(44, 46, 48);
+			font-weight: bold;
+			line-height: 70px;
+
+		}
+		.b3q{
+			position: absolute;
+			left:0px;
+			top:0px;
+			width:100%;
+			height:100%;
+			background-color: rgb(44, 46, 48);
+			display: none;
+			z-index: 200;
+			font-size:60px;
+			color:rgb(85, 224, 152);
+			font-weight: bold;
+			line-height: 90px;
+
+
+		}
+		.b4q{
+			position: absolute;
+			left:0px;
+			top:0px;
+			width:100%;
+			height:100%;
+			background-color:rgb(85, 224, 152);
+			display: none;
+			z-index: 200;
+			font-size:70px;
+			color:rgb(44, 46, 48);
+			font-weight: bold;
+			line-height: 90px;
+
+		}
+		.b5q{
+			position: absolute;
+			left:0px;
+			top:0px;
+			width:100%;
+			height:100%;
+			background-color:rgb(44, 46, 48);
+			display: none;
+			z-index: 200;
+			font-size:60px;
+			color:rgb(85, 224, 152);
+			font-weight: bold;
+			line-height: 70px;
+		}
+		.b6q{
+			position: absolute;
+			left:0px;
+			top:0px;
+			width:100%;
+			height:100%;
+			background-color:rgb(85, 224, 152);
+			display: none;
+			z-index: 200;
+			font-size:60px;
+			color:rgb(44, 46, 48);
+			font-weight: bold;
+			line-height: 70px;
+		}
