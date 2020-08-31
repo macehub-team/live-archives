@@ -12,7 +12,7 @@
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,500" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
 
@@ -25,10 +25,15 @@
     h1,h2,h3,h4,h5,h6{
       font-weight: 600;
     }
+    #main-title{
+      font-weight: 500;
+      font-family: 'Montserrat';
+    }
     a.card{
       text-decoration: none;
       color: black;
-      min-height: 160px;
+      min-height: 180px;
+      margin-bottom: 20px;
     }
     a:hover{
       transition: all 200ms ease-in-out;
@@ -40,6 +45,11 @@
     .developers{
       font-size: 0.9rem;
     }
+    @media only screen and (max-width: 600px) {
+      span.macehub-logo{
+        display: block;
+      } 
+    }
   </style>
 
 </head>
@@ -48,12 +58,16 @@
 
   <!-- Page Content -->
   <div class="container">
-    <h1 class="mt-5 mb-5"><img src="vendor/favicon.png" style="height: 2.6rem;vertical-align: bottom;transform: translateY(-3px);" class="mr-3"/> Macehub Live Archives</h1>
+    <h2 class="mt-5 mb-5" id="main-title">
+      <span class="macehub-logo"><img src="vendor/favicon.png" style="height: 2.6rem;vertical-align: bottom;transform: translateY(-3px);" class="mr-3"/></span>
+      Macehub Live Archives
+    </h2>
+
     <div class="row">
       <div class="col-sm-6 col-md-4  col-lg-3">
-        <a href="takshak.in/18/" class="card">
+        <a href="takshak/18/" class="card">
           <div class="card-body">
-            <h5 class="card-title">Takshak'19 Official Website</h5>
+            <h5 class="card-title">Takshak'18 Official Website</h5>
             <p class="card-text developers">
               <b>Developed By</b><br/>
               Donatto B Mookken<br/>
@@ -63,7 +77,7 @@
         </a>
       </div>
       <div class="col-sm-6 col-md-4  col-lg-3">
-        <a href="takshak.in/19/" class="card">
+        <a href="takshak/19/" class="card">
           <div class="card-body developers">
             <h5 class="card-title">Takshak'19 Official Website</h5>
             <p class="card-text">
