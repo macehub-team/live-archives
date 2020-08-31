@@ -1,0 +1,46 @@
+#about-section-container {
+  background-color: transparent;
+  font-size: 30px;
+  padding: 1em 2em;
+  cursor: pointer;
+  border: 0px;
+  -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05) inset;
+          box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05) inset;
+  position: relative;
+}
+
+#about-section-container::before, #about-section-container::after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-color: transparent;
+  border-style: solid;
+  -webkit-transition: border-color 0s linear 1s, height 0.5s ease-in-out 0s, width 0.5s ease-in-out 0.5s;
+  transition: border-color 0s linear 1s, height 0.5s ease-in-out 0s, width 0.5s ease-in-out 0.5s;
+}
+
+#about-section-container::before {
+  top: 0;
+  left: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-width: 1px 1px 0 0;
+}
+
+#about-section-container::after {
+  bottom: 0;
+  right: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-width: 0 0 1px 1px;
+}
+
+#about-section-container:hover::before, #about-section-container:hover::after {
+  width: 100%;
+  height: 100%;
+  border-color: #ffffff;
+  -webkit-transition: width 0.5s ease-in-out 0s, height 0.5s ease-in-out 0.5s;
+  transition: width 0.5s ease-in-out 0s, height 0.5s ease-in-out 0.5s;
+}
+/*# sourceMappingURL=border.css.map */
