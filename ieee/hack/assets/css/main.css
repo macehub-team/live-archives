@@ -2862,9 +2862,13 @@ Cover
     padding: 5px 30px;
   }
 }
+
 /*  ----------------------------------------------------
 5 icon boxes
 -------------------------------------------------------- */
+.col-12{
+  display: table-cell;
+}
 .icon-lg {
   font-size: 64px !important;
 }
@@ -2985,11 +2989,15 @@ Cover
 /*  ----------------------------------------------------
 6 speakers
 -------------------------------------------------------- */
+
 .speaker_box {
+  display: table; /* Make the container element behave like a table */
+    width: 100%;
   position: relative;
   overflow: hidden;
 }
 .speaker_box .speaker_img {
+  display: table-cell;
   position: relative;
   overflow: hidden;
 }
@@ -2999,10 +3007,10 @@ Cover
   transition: all ease-in-out 0.4s;
 }
 .speaker_box .speaker_img .info_box {
-  position: absolute;
-  bottom: 25px;
+  position: relative;
+  bottom: 20px;
   background-color: #18181c;
-  padding: 10px 30px;
+  padding: 0px 30px;
   -webkit-transition: all ease-in-out 0.4s;
   transition: all ease-in-out 0.4s;
 }
@@ -3074,7 +3082,6 @@ Cover
 .price_box {
   position: relative;
   padding: 75px 30px;
-  
   margin-bottom: 30px;
   text-align: center;
   background-color: #e2e4e6;
@@ -3083,15 +3090,22 @@ Cover
 }
 .price_box.first{
 
-  background-color: yellow;
+background-color: #f9d29d;
+background-image: linear-gradient(315deg, #f9d29d 0%, #ffd8cb 74%);
+border-radius: 25px;
+
   
 }
 .price_box.second{
-background-color: lawngreen;
+background-color: #89d8d3;
+background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
+border-radius: 25px;
 }
 
 .price_box.third{
-  background-color: rgb(255, 77, 240);
+background-color: #f6f0c4;
+background-image: linear-gradient(315deg, #f6f0c4 0%, #d99ec9 74%);
+border-radius: 25px;
 }
 
 .price_box.special {
@@ -3100,17 +3114,19 @@ background-color: lawngreen;
   margin-bottom: 30px;
   margin: 30px;
   text-align: center;
-  background-color: #0652fd;
+  background-color: #537895;
+  background-image: linear-gradient(315deg, #537895 0%, #09203f 74%);
   -webkit-transition: all ease-in-out 0.4s;
   transition: all ease-in-out 0.4s;
+  border-radius: 25px;
 }
 
 .price_box.special p{
-  color: #dddddd;
+  color: #fff;
 }
 
 .price_box.special h3{
-  color: #dddddd;
+  color: #fff;
 }
 
 .price_box .price_highlight {
@@ -3163,7 +3179,8 @@ background-color: lawngreen;
   margin-top: 30px;
 }
 .price_box:hover {
-  background-color: #ffffff;
+  background-color: #feae96;
+background-image: linear-gradient(315deg, #feae96 0%, #fe0944 74%);
   -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   -webkit-transition: all ease-in-out 0.4s;
@@ -3233,6 +3250,43 @@ background-color: lawngreen;
 }
 .event_box .readmore_btn:hover {
   color: #18181c;
+}
+
+/*===================================================*/
+.after-video .video-container{
+    position: relative;
+    width: calc(100% + 30px);
+    transform: translate(-15px,0);
+    padding-bottom: 56.25%;
+    /* box-shadow: rgba(34, 158, 207, 0.3) 0px 0px 130px; */
+    /* background-color: transparent; */
+}
+
+.after-video .video-container .video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: rgba(34, 158, 207, 0.3) 0px 0px 130px;
+    border: 0px solid transparent;
+    border-radius: 20px;
+}
+
+@media(max-width: 515px){
+    .after-video .video-container .video{
+        border-radius: 0;
+    }    
+}
+
+.after-video .entry-title{
+    margin-bottom: 5em;
+}
+
+@media(max-width: 515px){
+    .after-video .entry-title{
+        margin-bottom: 2em;
+    }    
 }
 
 /*  ----------------------------------------------------
