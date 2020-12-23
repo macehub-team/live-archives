@@ -2987,7 +2987,7 @@ Cover
 -------------------------------------------------------- */
 .speaker_box {
   position: relative;
-  overflow: hidden;
+  overflow: relative;
 }
 .speaker_box .speaker_img {
   position: relative;
@@ -3074,7 +3074,7 @@ Cover
 .price_box {
   position: relative;
   padding: 75px 30px;
-  
+  text-transform: capitalize;
   margin-bottom: 30px;
   text-align: center;
   background-color: #e2e4e6;

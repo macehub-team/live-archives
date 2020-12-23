@@ -1,13 +1,13 @@
 {
-  "name": "evento",
+  "name": ".hack();",
   "version": "1.0.0",
-  "description": "event html template",
+  "description": "hackathon registration",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "colorlib",
-  "license": "ISC",
+  "author": "MACEHUB",
+  "license": "none",
   "dependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.1.0",
