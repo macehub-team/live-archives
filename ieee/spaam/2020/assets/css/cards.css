@@ -1,0 +1,29 @@
+.single-pricing {
+  /* box-sizing: border-box; */
+  height: 100%;
+  padding: 0;
+  border: 1px solid #d3d3d3;
+  /* background-color: #d3d3d3; */
+}
+
+.pricing-btn {
+  margin-bottom: 1.2rem;
+}
+
+.pricing-list {
+  padding: 0 1rem;
+}
+
+.pricing-list li {
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+.single-pricing-container {
+  height: 93%;
+}
