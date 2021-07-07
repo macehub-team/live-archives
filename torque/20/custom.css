@@ -1,0 +1,44 @@
+#header-wrap .container::before,
+#header-wrap .container .navbar::before,
+#header-wrap .container::after,
+#header-wrap .container .navbar::after{
+    content: none !important;
+    display: none !important;
+}
+
+@media (max-width: 991px) {
+    .navbar-collapse.collapse{
+        display: none !important;
+    }
+
+    .navbar-collapse.show{
+        display: block !important;
+    }
+
+    .navbar-nav{
+        text-align: right;
+    }
+    .navbar-collapse{
+        min-width: 178px !important;
+        width: 0;
+        right: 0;
+        left: auto;
+    }
+    #header-wrap .nav-item{
+        padding: 0 15px 10px 0;
+    }
+}
+
+@media (max-width: 767px){
+    button.glow-on-hover{
+        width: 102px !important;
+    }
+}
+
+.nav.nav-tabs .nav-item{
+    width: 100%;
+}
+
+.services-item{
+    height: 100%;
+}
