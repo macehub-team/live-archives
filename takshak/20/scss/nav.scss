@@ -1,0 +1,212 @@
+.nav-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background-color: #0c0c0c;
+    z-index: 900;
+    // width: 100vw;
+}
+
+.nav-btn {
+    position: absolute;
+    color: #e6b715;
+    z-index: 590;
+    background: transparent;
+    border: none;
+    top: 20px;
+    right: 20px;
+}
+
+nav {
+    position: relative;
+    z-index: 1000;
+}
+
+.full-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 601;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-size: cover;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s 0s, visibility 0s 0.3s;
+}
+
+
+/* Full Menu */
+
+.full-menu .modal-close {
+    /* 'X' icon */
+    color: #e6b715;
+    position: absolute;
+    z-index: 600;
+    top: 0;
+    right: 0;
+    padding: 50px;
+    height: 45px;
+    width: 45px;
+    border: none;
+    //border-radius: 50%;
+    background: transparent; // rgba(0, 0, 0, 0.3) url(cd-icon-close.svg) no-repeat center center;
+    overflow: hidden;
+    // text-indent: 100%;
+    white-space: nowrap;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+    /*visibility 0.0s 0.3s, opacity 0.3s 0s;*/
+    transition: transform 0.3s 0s, visibility 0s 0.3s, opacity 0.3s 0s;
+}
+
+.no-touch .full-menu .modal-close:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.full-menu.visible {
+    background-size: 100%;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.7s, visibility 0s;
+}
+
+.full-menu.visible .fullmenu-content {
+    -webkit-overflow-scrolling: touch;
+}
+
+.full-menu.visible .modal-close {
+    visibility: visible;
+    opacity: 1;
+    transition: transform 0.3s 0s, visibility 0s 0s, opacity 0.3s 0s;
+    transform: scale(1);
+}
+
+@media only screen and (min-width: 1100px) {
+    .full-menu .fullmenu-content {
+        padding: 8rem 5%;
+    }
+    .full-menu .modal-close {
+        height: 60px;
+        width: 60px;
+    }
+    .full-menu p {
+        font-size: 25px;
+    }
+}
+
+.cd-transition-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 599;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+.cd-transition-layer .bg-layer {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateY(-50%) translateX(-2%);
+    transform: translateY(-50%) translateX(-2%);
+    height: 100%;
+    /* our sprite is composed of 25 frames */
+    width: 2500%;
+    background: url(../images/ink.png) no-repeat 0 0;
+    background-size: 100% 100%;
+}
+
+.cd-transition-layer.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cd-transition-layer.opening .bg-layer {
+    animation: cd-sequence 1s steps(24);
+    animation-fill-mode: forwards;
+}
+
+.cd-transition-layer.closing .bg-layer {
+    animation: cd-sequence-reverse 1s steps(24);
+    animation-fill-mode: forwards;
+}
+
+.no-cssanimations .cd-transition-layer {
+    display: none;
+}
+
+@keyframes cd-sequence {
+    0% {
+        transform: translateY(-50%) translateX(-2%);
+    }
+    100% {
+        transform: translateY(-50%) translateX(-98%);
+    }
+}
+
+@keyframes cd-sequence-reverse {
+    0% {
+        transform: translateY(-50%) translateX(-98%);
+    }
+    100% {
+        transform: translateY(-50%) translateX(-2%);
+    }
+}
+
+.page-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    align-self: center;
+    padding-top: 7em;
+}
+
+.page-menu li {
+    line-height: 50px;
+    margin-left: -25px;
+}
+
+.page-menu li .current-page {
+    color: #e6b715;
+}
+
+
+/*.page-menu li:last-child {
+    line-height: 90px;
+}*/
+
+.page-menu li a {
+    color: white;
+    font-size: 26px;
+    position: relative;
+    font-weight: 500;
+}
+
+.takshak-logo-nav {
+    width: 60px;
+    height: 60px;
+    padding: 10px 10px;
+}
+
+.land-logo {
+    visibility: hidden;
+}
+
+.social {
+    padding: 50px 0px;
+    a {
+        img {
+            padding: 0 10px;
+        }
+    }
+}

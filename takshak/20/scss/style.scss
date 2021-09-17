@@ -1,0 +1,874 @@
+$dark: #0c0c0c;
+$yellow: #eab411;
+$dark-blue: #0b3954;
+$light: #f3f3f3;
+$greenish-blue: #08242a;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+/* Works on Firefox */
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: $yellow $dark;
+}
+
+
+/* Works on Chrome, Edge, and Safari */
+
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: $dark;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: $yellow;
+    border-radius: 20px;
+    border: 3px solid $dark;
+}
+
+body {
+    font-family: "Kanit", sans-serif;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.tilt-element {
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+}
+
+.tilt-inner-element {
+    transform: translateZ(20px);
+}
+
+.vertical-text2 {
+    position: absolute;
+    right: 0;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    color: $yellow;
+    opacity: 0.09;
+    font-size: 2.5rem;
+    font-weight: 800;
+    &--get {
+        top: 10%;
+    }
+    &--into {
+        top: 40%;
+    }
+    &--instant {
+        top: 10%;
+    }
+    &--tech {
+        bottom: 10%;
+    }
+}
+
+.underlay-heading {
+    position: relative;
+    .text {
+        text-align: center;
+        font-size: 4rem;
+    }
+    .underlay {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -55%);
+        font-size: 8rem;
+        opacity: 0.07;
+    }
+}
+
+@media (max-width: 1024px) {
+    .underlay-heading {
+        .text {
+            font-size: 3rem;
+        }
+        .underlay {
+            font-size: 6rem;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .underlay-heading {
+        .text {
+            font-size: 2rem;
+        }
+        .underlay {
+            font-size: 4rem;
+        }
+    }
+}
+
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+//     LANDING SECTION
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+.landing {
+    // min-height: 160vh;
+    background-color: $dark;
+    position: relative;
+    .vertical-text {
+        // code from https://rascalsroundup.org/
+        text-transform: uppercase;
+        position: absolute;
+        top: 45%;
+        opacity: 0.09;
+        transform: translateY(-50%);
+        writing-mode: vertical-lr;
+        text-orientation: mixed;
+        white-space: nowrap;
+        color: $light;
+        z-index: 500;
+        &--left {
+            left: 0px;
+        }
+        &--right {
+            right: 0px;
+        }
+    }
+    .hero,
+    .about {
+        min-height: 100vh;
+        position: relative;
+        z-index: 200;
+    }
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding-left: 10rem;
+        &__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+            // .logo-wrapper {
+            //     padding: 0.5rem;
+            //     background-color: $dark;
+            //     border-radius: 50%;
+            //     display: flex;
+            //     align-items: center;
+            //     justify-content: center;
+            // }
+            .takshak-logo {
+                height: 15rem;
+                width: auto;
+            }
+            .takshak-text {
+                height: 7rem;
+                width: auto;
+            }
+            h1 {
+                color: #eeeeee;
+                font-size: 3em;
+            }
+        }
+    }
+    .about {
+        // background: rgb(234, 180, 17);
+        // background: linear-gradient(180deg, rgba(234, 180, 17, 1) 38%, rgba(219, 118, 26, 1) 100%);
+        background: url("../images/crowd.jpeg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: 50% 30%;
+        min-height: 120vh;
+        position: relative;
+        padding-bottom: 5rem;
+        padding-top: 5rem;
+        .overlay {
+            background-color: $dark;
+            opacity: 0.9;
+            z-index: -100;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            height: 100%;
+            width: 100%;
+        }
+        .social {
+            background-color: #1c1c1c;
+            width: 60%;
+            padding: 2rem 1rem;
+            margin: 0 auto;
+            margin-top: -9rem;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            &__icon:hover {
+                // background-color: $yellow;
+                cursor: pointer;
+            }
+        }
+        &__heading {
+            padding: 5rem 0;
+            .text {
+                color: $yellow;
+            }
+            .underlay {
+                color: $yellow;
+            }
+        }
+        &__takshak {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            padding-left: 4rem;
+            margin-top: 5rem;
+            width: 80%;
+            .takshak-text {
+                flex-basis: 30%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                &__heading {
+                    color: $yellow;
+                    letter-spacing: 4.4px;
+                }
+                &__desc {
+                    color: $light;
+                    width: 70%;
+                }
+            }
+            .takshak-img {
+                position: relative;
+                &__img {
+                    width: 635px;
+                    height: auto;
+                }
+                &__pattern {
+                    position: absolute;
+                    bottom: -7%;
+                    right: -7%;
+                    z-index: -20;
+                }
+            }
+        }
+        &__mace {
+            margin-top: 10rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            width: 100%;
+            padding-left: 4rem;
+            padding-bottom: 6rem;
+            // margin-left: auto;
+            .technification {
+                position: relative;
+                bottom: -5rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                color: $yellow;
+                font-size: 2rem;
+                font-weight: 900;
+            }
+            .mace-text {
+                flex-basis: 30%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                margin-left: 2rem;
+                &__heading {
+                    color: $yellow;
+                    letter-spacing: 4.4px;
+                }
+                &__desc {
+                    color: $light;
+                    width: 60%;
+                }
+            }
+            .mace-img {
+                margin-left: 2rem;
+                &__img {
+                    width: 635px;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .landing {
+        .about {
+            &__heading {
+                padding: 3rem 0;
+                .text {
+                    font-size: 3rem;
+                }
+                .underlay {
+                    font-size: 6rem;
+                    opacity: 0.07;
+                }
+            }
+            &__takshak {
+                flex-direction: column;
+                justify-content: center;
+                .takshak-text {
+                    &__desc {
+                        width: 50%;
+                    }
+                }
+                .takshak-img {
+                    &__img {
+                        // width: 400px;
+                        height: auto;
+                    }
+                    &__pattern {
+                        display: none;
+                    }
+                }
+            }
+            &__mace {
+                flex-direction: column-reverse;
+                width: 80%;
+                margin-left: 0;
+                .technification {
+                    display: none;
+                }
+                .mace-text {
+                    margin-left: 0;
+                }
+                .mace-img {
+                    width: 100%;
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .landing {
+        .hero {
+            align-items: center;
+            padding: 0.4rem;
+            &__content {
+                .takshak-logo {
+                    height: 10rem;
+                    width: auto;
+                }
+                .takshak-text {
+                    height: 6rem;
+                    width: auto;
+                }
+            }
+        }
+        .about {
+            .social {
+                &__icon {
+                    padding: 0.1rem 0.5rem;
+                }
+            }
+            &__heading {
+                padding: 2rem 0;
+                .text {
+                    font-size: 2rem;
+                }
+                .underlay {
+                    font-size: 4rem;
+                    opacity: 0.07;
+                }
+            }
+            &__takshak {
+                flex-direction: column;
+                justify-content: center;
+                .takshak-text {
+                    &__desc {
+                        width: 90%;
+                    }
+                }
+                .takshak-img {
+                    &__img {
+                        width: 90%;
+                        height: auto;
+                    }
+                }
+            }
+            &__mace {
+                flex-direction: column-reverse;
+                width: 80%;
+                margin-top: 1rem;
+                margin-left: 0;
+                .technification {
+                    display: none;
+                }
+                .mace-text {
+                    margin-left: 0;
+                    &__desc {
+                        width: 90%;
+                    }
+                }
+                .mace-img {
+                    &__img {
+                        width: 90%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+//     LANDING SECTION END!!
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+//     EVENTS SECTION
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+.events {
+    min-height: 100vh;
+    position: relative;
+    background-color: $dark;
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+    &__heading {
+        padding: 5rem 0;
+        .text {
+            color: $yellow;
+        }
+        .underlay {
+            color: $yellow;
+        }
+    }
+    .premium-events {
+        &__wrapper {
+            position: relative;
+            width: 80%;
+            margin: 0 auto;
+            min-height: 30rem;
+            background-image: url("../images/lambo-premium.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            .overlay {
+                z-index: 10;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background: linear-gradient(180deg, rgba(200, 118, 220, 0.56) 0%, rgba(200, 118, 220, 0.16) 100%);
+            }
+        }
+        &__title,
+        &__list {
+            position: relative;
+            z-index: 20;
+        }
+        &__title {
+            flex-basis: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding-bottom: 4rem;
+            padding-left: 4rem;
+            .premium-title {
+                font-size: 3rem;
+                color: $yellow;
+                letter-spacing: 3px;
+            }
+        }
+        &__list {
+            flex-basis: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            padding-bottom: 4rem;
+            .premium-list {
+                .premium-event {
+                    .link {
+                        font-size: 1.2rem;
+                        font-weight: 700;
+                        color: $light;
+                        transition: all ease-in 200ms;
+                        &:hover {
+                            color: $yellow;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .event-categories {
+        &__wrapper {
+            width: 80%;
+            margin: 4rem auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .event-category {
+                position: relative;
+                height: 22rem;
+                width: 18rem;
+                margin: 2rem 1rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                background-repeat: no-repeat;
+                background-size: cover;
+                .overlay {
+                    z-index: 10;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    background: linear-gradient(180deg, rgba(200, 118, 220, 0.56) 0%, rgba(200, 118, 220, 0.16) 100%);
+                }
+                .content {
+                    padding: 2rem 1rem;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    .title {
+                        color: $yellow;
+                        font-size: 1.2rem;
+                        letter-spacing: 2px;
+                    }
+                    .btn {
+                        border-radius: 50%;
+                        background-color: $yellow;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 0.8rem;
+                        &:hover {
+                            box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1), 0px 2px 4px -1px rgba(0, 0, 0, 0.06);
+                        }
+                    }
+                }
+                &.workshops {
+                    background-image: url("../images/workshop-img.png");
+                }
+                &.talksexpos {
+                    background-image: url("../images/talksexpos-img.png");
+                }
+                &.technical {
+                    background-image: url("../images/technical-img.png");
+                }
+                &.informals {
+                    background-image: url("../images/informals-img.png");
+                }
+                &.socials {
+                    background-image: url("../images/social-img.png");
+                }
+                &.mca {
+                    background-image: url("../images/mca-img.jpg");
+                }
+            }
+            .explore {
+                cursor: pointer;
+                display: flex;
+                flex-direction: columno;
+                justify-content: space-evenly;
+                align-items: center;
+                border: 10px solid $yellow;
+                transition: all 600ms;
+                .plus-sign {
+                    z-index: 20;
+                    transition: all 500ms;
+                }
+                .explore-text {
+                    z-index: 20;
+                    color: $yellow;
+                    text-align: center;
+                }
+                &:hover {
+                    border: 3px solid $yellow;
+                    .plus-sign {
+                        transform: scale(1.3);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .events {
+        .premium-events {
+            &__wrapper {
+                width: 95%;
+            }
+        }
+        .event-categories {
+            &__wrapper {
+                width: 95%;
+                margin-left: 0;
+                .event-category {
+                    align-self: center;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .events {
+        .premium-events {
+            &__wrapper {
+                width: 95%;
+                flex-direction: column;
+                background-position: center right;
+            }
+            &__title {
+                padding-bottom: 0.4rem;
+                .premium-title {
+                    font-size: 1.5rem;
+                }
+            }
+            &__list {
+                justify-content: flex-start;
+                align-items: flex-start;
+                padding-left: 4rem;
+            }
+        }
+        .event-categories {
+            &__wrapper {
+                .event-category {
+                    height: 15rem;
+                    width: 12rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .events {
+        .event-categories {
+            &__wrapper {
+                flex-flow: column nowrap;
+                align-items: center;
+                margin: 2rem auto;
+                .event-category {
+                    width: 95%;
+                    margin: 1rem 0;
+                }
+            }
+        }
+    }
+}
+
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+//     EVENTS SECTION END!!
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+//     THEME SECTION
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+.theme {
+    min-height: 100vh;
+    background-image: url("../images/theme-image-compressed.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    &__heading {
+        width: 50%;
+        margin-right: auto;
+        .text {
+            color: $yellow;
+        }
+        .underlay {
+            color: $yellow;
+        }
+    }
+    &__content {
+        color: $light;
+        width: 80%;
+        height: 100%;
+        margin-bottom: 4rem;
+        // margin-right: auto;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
+        // align-items: center;
+        .heading {
+            font-size: 3rem;
+            color: $light;
+        }
+        .paragraph {
+            padding: 1rem 1rem;
+            width: 39%;
+            // background-color: #0c0c0caa;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+    }
+}
+
+@media(max-width:900px) {
+    .theme {
+        min-height: 120vh;
+        justify-content: flex-end;
+        background-position: top center;
+        background-image: url("../images/theme-image-mobile-compressed.jpg");
+        &__content {
+            width: 95%;
+            padding-bottom: 2rem;
+            margin-bottom: 0;
+            .heading {
+                font-size: 2rem;
+            }
+            .paragraph {
+                width: 100%;
+                padding: 1rem 0.5rem;
+            }
+        }
+    }
+}
+
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+//     THEME SECTION END!!
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// .fast-nav {
+//     background-color: $dark-blue;
+//     color: $yellow;
+//     padding: 3rem 0.5rem;
+//     body.page-child #quick-links {
+//         margin-top: 80px;
+//     }
+//     #quick-links .inner {
+//         text-align: center;
+//         padding: 0;
+//     }
+//     #quick-links h2 {
+//         position: relative;
+//         z-index: 3;
+//         left: -30px;
+//     }
+//     #quick-links a {
+//         text-decoration: none;
+//         display: inline-block;
+//         width: 251px;
+//         margin: 0 23px;
+//         text-align: left;
+//         vertical-align: top;
+//     }
+//     #quick-links a.ql-blog {
+//         width: 248px;
+//     }
+//     #quick-links a:hover .arrow {
+//         margin-left: 30px;
+//     }
+//     #quick-links a div {
+//         position: relative;
+//         top: -70px;
+//         overflow: hidden;
+//         width: 100%;
+//         height: 302px;
+//     }
+//     #quick-links a.ql-prog div {
+//         top: -117px;
+//         margin-bottom: -87px;
+//     }
+//     #quick-links a.ql-billet div {
+//         top: -78px;
+//         margin-bottom: -48px;
+//     }
+//     #quick-links a.ql-brass div {
+//         top: -117px;
+//         margin-bottom: -87px;
+//     }
+//     #quick-links a.ql-blog div {
+//         top: -77px;
+//         margin-bottom: -47px;
+//     }
+//     #quick-links a div img {
+//         position: absolute;
+//         display: block;
+//     }
+//     #quick-links a div img.mask {
+//         z-index: 2;
+//     }
+//     #quick-links a div img.bg {
+//         width: auto;
+//         -webkit-transition: all 400ms ease;
+//         -moz-transition: all 400ms ease;
+//         -ms-transition: all 400ms ease;
+//         -o-transition: all 400ms ease;
+//         transition: all 400ms ease;
+//     }
+//     #quick-links a:hover div img.bg {
+//         -moz-transform: scale(1.2);
+//         -webkit-transform: scale(1.2);
+//         -o-transform: scale(1.2);
+//         -ms-transform: scale(1.2);
+//         transform: scale(1.2);
+//     }
+//     #quick-links a.ql-prog img.bg {
+//         top: 57px;
+//     }
+//     #quick-links a.ql-brass img.bg {
+//         top: 50px;
+//     }
+//     #quick-links a.ql-blog img.bg {
+//         top: 5px;
+//     }
+//     #quick-links a.ql-billet {
+//         padding-top: 50px;
+//     }
+//     #quick-links a.ql-blog {
+//         padding-top: 46px;
+//     }
+// }
+.bg-anim {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0%;
+    right: 0%;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    overflow-x: hidden;
+}
