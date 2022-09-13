@@ -1,0 +1,159 @@
+.sponsors {
+    position: relative;
+    background: url("../images/bg/cta-bg.jpg") no-repeat fixed 50% 50%;
+    background-size: cover;
+    margin-top: 5%;
+}
+
+.sponsors:before {
+    position: absolute;
+    content: "";
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    /*background: rgba(0, 0, 0, 0.97);*/
+}
+
+.client-item {
+    float: left;
+    /* width: 20%; */
+    height: 115px;
+    /*border: 1px solid rgba(255, 255, 255, 0.05);*/
+    padding: 20px;
+    text-align: center;
+    opacity: 0.7;
+    transition: all 0.45s ease-in-out;
+    border-radius: 15px;
+}
+
+.client-item a {
+    display: block;
+}
+
+.client-item:hover {
+    background: linear-gradient(
+        152.97deg,
+        rgba(255, 255, 255, 0.1) 0%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    backdrop-filter: blur(42px);
+    /* Note: backdrop-filter has minimal browser support */
+}
+
+.client-item-diamond {
+    float: left;
+    /* width: 20%; */
+    height: 145px;
+    /*border: 1px solid rgba(255, 255, 255, 0.05);*/
+    padding: 40px;
+    text-align: center;
+    opacity: 0.7;
+    transition: all 0.45s ease-in-out;
+}
+
+.client-item-diamond a {
+    display: block;
+}
+
+.client-item-diamond:hover {
+    background: linear-gradient(
+        152.97deg,
+        rgba(255, 255, 255, 0.1) 0%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    backdrop-filter: blur(42px);
+}
+
+.client-item-partners {
+    float: left;
+    /* width: 20%; */
+    height: 130px;
+    /*border: 1px solid rgba(255, 255, 255, 0.05);*/
+    padding: 30px;
+    text-align: center;
+    opacity: 0.7;
+    transition: all 0.45s ease-in-out;
+    border-radius: 15px;
+}
+
+.client-item-partners a {
+    display: block;
+}
+
+.client-item-partners:hover {
+    background: linear-gradient(
+        152.97deg,
+        rgba(255, 255, 255, 0.1) 0%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    backdrop-filter: blur(42px);
+}
+
+@media (max-width: 991px) {
+    .client-item {
+        /* width: 20%; */
+    }
+}
+
+@media (max-width: 767px) {
+    .client-item {
+        /* width: 30%; */
+    }
+}
+
+@media (max-width: 480px) {
+    .client-item {
+        /* width: 40%; */
+    }
+}
+
+@media (max-width: 400px) {
+    .client-item {
+        /* width: 50%; */
+    }
+}
+
+.bg-black {
+    background: #000;
+}
+
+.letter-spacing {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.text-sm {
+    font-size: 14px;
+}
+
+.bg-gray {
+    background: #eee;
+}
+
+#Sponsors {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#sponsors > h4 {
+    text-align: center;
+    margin: 15px 0;
+}
+
+@media (max-width: 690px) {
+    #Sponsors {
+        flex-direction: column;
+    }
+}
+
+#safeonnet {
+    width: 7rem;
+    height: auto;
+}
+
+#rotary {
+    width: 11rem;
+    height: auto;
+}
