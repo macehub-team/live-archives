@@ -1,0 +1,55 @@
+@import 'colors';
+
+/* Works on Firefox */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: $yellow $dark;
+}
+
+
+/* Works on Chrome, Edge, and Safari */
+
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: $dark;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: $yellow;
+    border-radius: 20px;
+    border: 3px solid $dark;
+}
+
+body {
+    font-family: "Kanit", sans-serif;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.tilt-element {
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+}
+
+.tilt-inner-element {
+    transform: translateZ(20px);
+}

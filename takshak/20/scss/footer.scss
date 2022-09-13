@@ -1,0 +1,56 @@
+@import "colors";
+.footer {
+    background-color: $dark;
+    // min-height: 60vh;
+    &__tech {
+        width: 100%;
+        background-color: $yellow;
+        padding: 3rem 2rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        .content {
+            flex-basis: 50%;
+        }
+        .logo-wrapper {
+            .logo-bg {
+                background-color: $dark;
+                border-radius: 50%;
+                padding: 2rem;
+                .logo {
+                    height: 8rem;
+                    width: auto;
+                }
+            }
+        }
+    }
+    &__main {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        color: $light;
+        height: 100%;
+        padding: 3rem 2rem;
+        .content-left {
+            margin-right: 1rem;
+        }
+    }
+}
+
+@media(max-width:1024px) {
+    .footer {
+        &__tech {
+            width: 100%;
+            flex-direction: column;
+            .content {
+                text-align: center;
+            }
+        }
+        &__main {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+}
