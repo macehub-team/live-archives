@@ -1,0 +1,72 @@
+/*--------------------------------------------------------------
+# Contribute Section
+--------------------------------------------------------------*/
+#contribute{
+    background-color: #0E1219;
+    color:#fff;
+    
+}
+/*=============== ABOUT ===============*/
+.contribute__container{
+    row-gap: 2rem;
+  }
+  
+  .contribute__data{
+    /* text-align: center; */
+  }
+  
+  .contribute__description{
+    /* margin-bottom: var(--mb-2); */
+    text-align:justify;
+    margin-bottom: 30px;
+  }
+  
+  .contribute__img{
+    width: 200px;
+    justify-self: center;
+  }
+  section{
+    padding-top:100px;
+  }
+  .section__title {
+    font-weight:600;
+    /* font-family: 'Roboto Slab', serif; */
+  }
+
+  .contribute__title {
+    margin: 20px 0;
+    font-weight: bold;
+  }
+
+  .contribute__description {
+    max-width: 800px;
+  }
+
+  .contribute__payment-card {
+    border: 3px solid #e6e6e6;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    max-width: 800px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+  }
+
+  .contribute__payment-card a {
+    background-color: orange;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    padding: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+  }
+
+  .contribute__payment-card p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+  }
